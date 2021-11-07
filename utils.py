@@ -29,8 +29,10 @@ class ImageDataset(Dataset):
             mask_path = row[-1]
 
             self.labels.append(label)
-            self.images_path.append(os.path.join(images_dir, image_path))
-            self.mask_path.append(os.path.join(mask_dir, mask_path))
+            #self.images_path.append(os.path.join(images_dir, image_path))
+            self.images_path.append(image_path)
+            #self.mask_path.append(os.path.join(mask_dir, mask_path))
+            self.mask_path.append(mask_path)
 
         self.img_transform1 = img_transform1
         self.img_transform2 = img_transform2
